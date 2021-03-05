@@ -118,3 +118,19 @@ ReactDOM.render(element, document.getElementById('root'));
         </div>
       );
     }
+        ////we dont need to write all the time this. props... we can create a const like this bellow ...
+        
+     ///   Class Book extends Component {
+ /// constructor(props) {
+ ///   super(props)
+ /// }
+ ///   render() ----> // if it is a class comp. we have to use the render function //
+ ///     
+        const {title,isbn} =this.proops.book;
+          return(
+  ///      <div>
+  ///         <h2>{title}</h2>
+  ///         <p>{isbm}</p>
+  ///      </div>
+   ///   );
+   /// } 
