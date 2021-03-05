@@ -20,27 +20,93 @@ ReactDOM.render(element, document.getElementById('root'));
 
 
 
-  ---- COMPONENS ----
+  ---- COMPONENTS ----
   
--  Stateles Components
+-->  Stateles Components
 
   / in ----index ---- .js we need to render our componens /
  ReactDom.render(
- <div>
+ <div> 
   <Book title="Avatar"/> 
  </div>
- );
+
+ document.getElemenById('root');
 
  /Create a new component ---- Book.js ----- (every componant need to import React from 'react'
  
  const BookTitle = (props) => {
-  return  <di> 
-            <BookTitle title={props.title} </>
-          </div>
+  return (
+     <div> 
+       <BookTitle title={props.title} </>
+     </div>
    )
  }
  
  const Book =(props) +> {     
-  retun <div>  </div>
+  return <div>  </div>
  }
  export default Book  /we need to export than we can call from another file...(for example in the index JS files.../
+ 
+ 
+ 
+ --> ----  Class Components  ----/ using Booklist.js for an example/
+ 
+ import React,{Component} from 'react'
+ 
+ class BookList extends Component {
+ state =  { //classes can have their own componens//
+  books: [
+    {
+      title: 'Star Wars',
+      isbn:"abs123"
+    },
+     {
+      title: 'Romeo@Juliet',
+      isbn:"abs133"
+    }
+   ]
+ }
+ ===LIfecicle methood===
+  constructor    //we can create a constructor....and we always need to call super//
+  super()
+  console.log(1);
+  }
+  
+  componentWillMounr (){   // It eill running before render//
+    console.log(2);
+  }
+  
+   componentDidlMounr (){    // It eill running after render//
+   console.log(4);
+  }
+  
+  render() {
+  console.log(3);
+    return(
+      <div> this.state.books.map((book,index) => {
+        return <div key={index}> {<Book key={index}/>} </div> //if we using arrays we have to use key cause react needs to now where is the changes in Dom //
+        })
+      </div>
+    );
+  }
+ }
+ export default BookList;
+ 
+/ in our  --- index.js ---
+ ReactDom.render(
+ <div>
+  <BookList"/> 
+ </div>
+
+ document.getElemenById('root');
+ 
+ ------ //Changing the ---- Book.JS.... file  we will using now as a Class components //
+     if we want to use booklist components from BookList we have to import to our Book file 
+     import Book from './components/Book.js'
+ Class Book extends Component {
+  render() ----> // if it is a class comp. we have to use the render function //
+    return(
+      <div>
+      </div>
+    );
+ }
