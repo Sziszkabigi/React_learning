@@ -20,10 +20,27 @@ ReactDOM.render(element, document.getElementById('root'));
 
 
 
-Componens
-- Statles Components
- /Create a new component Book.js(every componant need to import React from 'react'
- cinst Book =() +> {     
-  retun <div> Book </div>
+  ---- COMPONENS ----
+  
+-  Stateles Components
+
+  / in ----index ---- .js we need to render our componens /
+ ReactDom.render(
+ <div>
+  <Book title="Avatar"/> 
+ </div>
+ );
+
+ /Create a new component ---- Book.js ----- (every componant need to import React from 'react'
+ 
+ const BookTitle = (props) => {
+  return  <di> 
+            <BookTitle title={props.title} </>
+          </div>
+   )
+ }
+ 
+ const Book =(props) +> {     
+  retun <div>  </div>
  }
  export default Book  /we need to export than we can call from another file...(for example in the index JS files.../
