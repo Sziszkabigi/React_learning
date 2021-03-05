@@ -84,7 +84,7 @@ ReactDOM.render(element, document.getElementById('root'));
   console.log(3);
     return(
       <div> this.state.books.map((book,index) => {
-        return <div key={index}> {<Book key={index}/>} </div> //if we using arrays we have to use key cause react needs to now where is the changes in Dom //
+        return <div key={index}> {<Book book={book} key={index}/>} </div> //if we using arrays we have to use key cause react needs to now where is the changes in Dom //
         })
       </div>
     );
@@ -102,11 +102,19 @@ ReactDOM.render(element, document.getElementById('root'));
  
  ------ //Changing the ---- Book.JS.... file  we will using now as a Class components //
      if we want to use booklist components from BookList we have to import to our Book file 
-     import Book from './components/Book.js'
+     
+ import Book from './components/Book.js'
+ 
+ 
  Class Book extends Component {
-  render() ----> // if it is a class comp. we have to use the render function //
-    return(
-      <div>
-      </div>
-    );
- }
+  constructor(props) {
+    super(props)
+  }
+    render() ----> // if it is a class comp. we have to use the render function //
+      return(
+        <div>
+           <h2>{this.props.book.title}</h2>
+           <p>{this.props.book.isbm}</p>
+        </div>
+      );
+    }
