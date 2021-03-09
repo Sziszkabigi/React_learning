@@ -72,12 +72,15 @@ ReactDOM.render(element, document.getElementById('root'));
   console.log(1);
   }
   
-  componentWillMounr (){   // It eill running before render//
+  componentWillMount (){   // It will running before render//
     console.log(2);
   }
   
-   componentDidlMounr (){    // It eill running after render//
+   componentDidlMount (){    // It will running after render//   
    console.log(4);
+    this.setState({
+      books: [...this.state.books, (title: "Egri csillagok", isbn:"ert983")]
+    });
   }
   
   render() {
@@ -120,19 +123,25 @@ ReactDOM.render(element, document.getElementById('root'));
     }
         ////we dont need to write all the time this. props... we can create a const like this bellow ...  ---- we will use this format ---
         
-  Class Book extends Component {
-    state ={
-      a1:true,
-      a2"[],
-      selected:null
+   Class Book extends Component {
+    state = {
+      a1: true,
+      a2: [],
+      selected: null,
+      title: this.props.book.title
     }
     
-    OnclickHandler = (title) => {
+    OnclickHandler = (title) => (event) => {
       this.setState({
         selected: title 
         }, () => {
          console.log(this.state.selected)};
     }
+    componentWilReceiveProps(nexdtProps) {
+     this.setState({
+       title:nextProps.book.title
+     });
+   }
  
     render() ----> // if it is a class comp. we have to use the render function //
       
@@ -140,8 +149,18 @@ ReactDOM.render(element, document.getElementById('root'));
       
       return(
        <div>
-         <h2 onClick=() => {(this.OnclickHandler(title)}> {title} </h2>
+         <h2 BookTitle title={this.state.title} nclickFunc={this.OnclickHandler} </h2>
          <p> {isbm} </p>
        </div>
     );
    } 
+   
+   export default Book;
+
+?If we want to change our state we can use set state... example bellow :
+if we use props item it cant change outside the state.... so we can do thing like this ---- 
+ //  componentWilReceiveProps(nexdtProps) {
+   this.setState({
+     title:nextProps.book.title
+   });
+ }
