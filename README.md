@@ -7,6 +7,7 @@
   
 - Create index.js (for example)
 we have to import from React... 
+
 /
 
 import React from 'react';
@@ -15,6 +16,7 @@ import ReactDOM from 'react-dom';
 const element = <h1> Hello World!</h1>;
 console.log(element);
 ReactDOM.render(element, document.getElementById('root'));
+
 /
 
 - Import bootstrap / import 'bootstrap/dist/css/bootstrap.css';  /
@@ -34,7 +36,8 @@ ReactDOM.render(element, document.getElementById('root'));
 
  document.getElemenById('root');
 
- /Create a new component ---- Book.js ----- (every componant need to import React from 'react'
+ /
+ Create a new component ---- Book.js ----- (every componant need to import React from 'react'
  
  const BookTitle = (props) => {
   return (
