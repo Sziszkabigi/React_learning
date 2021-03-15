@@ -169,3 +169,11 @@ if we use props item it cant change outside the state.... so we can do thing lik
      title:nextProps.book.title
    });
  }
+
+----- Lifecycles components ----
+
+  class Example extends React.Component {
+  static getDerivedStateFromProps(props, state) {
+    // ...
+  }
+}
