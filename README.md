@@ -181,3 +181,5 @@ if we use props item it cant change outside the state.... so we can do thing lik
 The new static getDerivedStateFromProps lifecycle is invoked after a component is instantiated as well as before it is re-rendered. It can return an object to update state, or null to indicate that the new props do not require any state updates.
 
 Together with componentDidUpdate, this new lifecycle should cover all use cases for the legacy componentWillReceiveProps.
+
+---- more example here:   https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html   -----
