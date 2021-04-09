@@ -6,7 +6,7 @@
   npm start
   
 - Create index.js (for example)
-we have to import from React... 
+we have to import from React... ...
 
 /
 
