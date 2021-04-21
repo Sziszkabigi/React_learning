@@ -1,4 +1,9 @@
 # React_learning
+React is not a framework (unlike Angular, which is more opinionated).
+React is an open-source project created by Facebook.
+React is used to build user interfaces (UI) on the front end.
+React is the view layer of an MVC application (Model View Controller)
+
 
 - Create a react app in terminal / 
   npx create-react-app my-app
