@@ -53,6 +53,8 @@ const heading = <h1>Hello, {name}</h1>
 
   ---- COMPONENTS ----
   
+  Most React apps have many small components, and everything loads into the main App component. Components also often get their own file.
+  
 -->  Stateles Components
 
   / in ----index ---- .js we need to render our componens /
