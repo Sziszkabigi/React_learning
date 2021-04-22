@@ -142,6 +142,24 @@ Note that if the return is contained to one line, it does not need parentheses.
 ------ Props --------
 Right now, we have a cool Table component, but the data is being hard-coded. One of the big deals about React is how it handles data, and it does so with properties, referred to as props, and with state
 
+Props are an effective way to pass existing data to a React component, however the component cannot change the props - they're read-only. In the next section, we'll learn how to use state to have further control over handling data in React.
+
+------- State -------
+imagine if we want to be able to delete an item from the array. With props, we have a one way data flow, but with state we can update private data from a component.
+
+You can think of state as any data that should be saved and modified without necessarily being added to a database - for example, adding and removing items from a shopping cart before confirming your purchase.
+
+To start, we're going to create a state object.
+The object will contain properties for everything you want to store in the state. For us, it's characters.
+
+src/App.js
+
+class App extends Component {
+  state = {
+    characters: [],
+  }
+}
+
 
   
 --> ----- Stateles Components ----
