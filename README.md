@@ -55,6 +55,37 @@ const heading = <h1>Hello, {name}</h1>
   
   Most React apps have many small components, and everything loads into the main App component. Components also often get their own file.
   
+  Class Components
+  Let's create another component. for example Table.js, 
+
+import React, {Component} from 'react'
+
+class Table extends Component {
+  render() {
+    return (
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Job</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+          <tr>
+            <td>Dennis</td>
+            <td>Bartender</td>
+          </tr>
+        </tbody>
+      </table>
+    )
+  }
+}
+
+export default Table
+This component we created is a custom class component. We capitalize custom components to differentiate them from regular HTML elements. 
+  
+  
 -->  Stateles Components
 
   / in ----index ---- .js we need to render our componens /
