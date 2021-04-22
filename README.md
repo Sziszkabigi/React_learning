@@ -56,6 +56,8 @@ const heading = <h1>Hello, {name}</h1>
   Most React apps have many small components, and everything loads into the main App component. Components also often get their own file.
   
   Class Components
+  A class component must include render(), and the return can only return one parent element.
+  
   Let's create another component. for example Table.js, 
 
 import React, {Component} from 'react'
@@ -84,7 +86,45 @@ class Table extends Component {
 
 export default Table
 This component we created is a custom class component. We capitalize custom components to differentiate them from regular HTML elements. 
-  
+
+Simple Components
+The other type of component in React is the simple component, which is a function. This component doesn't use the class keyword. Let's take our Table and make two simple components for it - a table header, and a table body.
+
+We're going to use ES6 arrow functions to create these simple components. First, the table header.
+
+
+  A class component must include render(), and the return can only return one parent element.
+  const TableHeader = () => {
+    return (
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Job</th>
+        </tr>
+      </thead>
+    )
+  }
+  const TableBody = () => {
+    return (
+      <tbody>
+        <tr>
+          <td>Charlie</td>
+          <td>Janitor</td>
+        </tr>
+      </tbody>
+    )
+  }
+class Table extends Component {
+    render() {
+        return (
+        <table>
+            <TableHeader />
+            <TableBody />
+        </table>
+        )
+    }
+}
+export default Table;
   
 -->  Stateles Components
 
