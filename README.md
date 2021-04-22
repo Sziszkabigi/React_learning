@@ -137,9 +137,15 @@ class ClassComponent extends Component {
     return <div>Example</div>
   }
 }
-  
--->  Stateles Components
+Note that if the return is contained to one line, it does not need parentheses.
 
+------ Props --------
+Right now, we have a cool Table component, but the data is being hard-coded. One of the big deals about React is how it handles data, and it does so with properties, referred to as props, and with state
+
+
+  
+--> ----- Stateles Components ----
+-->
   / in ----index ---- .js we need to render our componens /
  ReactDom.render(
  <div> 
