@@ -125,6 +125,18 @@ class Table extends Component {
     }
 }
 export default Table;
+
+
+------  Simple Component ------
+const SimpleComponent = () => {
+  return <div>Example</div>
+}
+------ Class Component ------
+class ClassComponent extends Component {
+  render() {
+    return <div>Example</div>
+  }
+}
   
 -->  Stateles Components
 
