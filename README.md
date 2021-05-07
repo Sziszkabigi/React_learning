@@ -10,6 +10,13 @@ React is the view layer of an MVC application (Model View Controller)
   cd my-app
   npm start
   
+  
+  
+  ---- What should you do to deploy your front-end app on gh-pages?
+  ----y arn add gh-pages --dev   # add the module in your project.
+       webpack -p                # create your production bundle.
+       gh-pages -d dist          # deploy it on Github Pages.
+  
 - Create index.js (for example)
 we have to import from React......
 
